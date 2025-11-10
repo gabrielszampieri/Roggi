@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8"/>
+        <title>serviços</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+        <link href="assets/style.css" rel="stylesheet">
+        <link rel="icon" href="assets/logo_small.png" type="image/png">
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="menu_background"></div>
+            
+            <nav class="menu"> 
+                <div class="menu_imgs" id="logo">
+                    <a href="#" onclick="dark_mode()">
+                        <img id="menu_logo_img" src="assets\logo_normal.png" loading="lazy" alt="logo_normal"/>
+                    </a>
+                    <h2 id="menu_text_logo">ROGGi</h2>
+                </div>
+    
+                <div class="menu_buttons">
+                    <a href="index.html">
+                        <h2 class="menu_text">início</h2>
+                    </a>
+                    <a href="servicos.html">
+                        <h2 id="menu_text_selected">serviços</h2>
+                    </a>
+                    <a onclick="comunidade()">
+                        <h2 class="menu_text">comunidade</h2>
+                    </a>
+                    <a href="sobre.html">
+                        <h2 class="menu_text">sobre nós</h2>
+                    </a>
+                </div>
+    
+                <div class="menu_imgs">
+                    <!-- <div class="menu_imgs">
+                        <a id="bnt_login" onclick="toggleDropdown_act()">
+                            <svg class="menu_icon" height="2rem" viewBox="0 -960 960 960" fill="var(--main_text)">
+                                <path d="M109.91-240Q81-240 60.5-260.59 40-281.18 40-310.09t20.49-49.41q20.5-20.5 49.28-20.5 5.23 0 10.23.5t13 2.5l200-200q-2-8-2.5-13t-.5-10.23q0-28.78 20.59-49.28Q371.18-670 400.09-670t49.41 20.63q20.5 20.64 20.5 49.61 0 1.76-3 22.76l110 110q8-2 13-2.5t10-.5q5 0 10 .5t13 2.5l160-160q-2-8-2.5-13t-.5-10.23q0-28.78 20.59-49.28Q821.18-720 850.09-720t49.41 20.59q20.5 20.59 20.5 49.5t-20.49 49.41q-20.5 20.5-49.28 20.5-5.23 0-10.23-.5t-13-2.5L667-423q2 8 2.5 13t.5 10.23q0 28.78-20.59 49.28Q628.82-330 599.91-330t-49.41-20.49q-20.5-20.5-20.5-49.28 0-5.23.5-10.23t2.5-13L423-533q-8 2-13 2.5t-10.25.5q-1.75 0-22.75-3L177-333q2 8 2.5 13t.5 10.23q0 28.78-20.59 49.28Q138.82-240 109.91-240Z"/>
+                            </svg>
+                        </a>
+                    </div> -->
+                    <div class="menu_imgs">
+                        <a onclick="toggleDropdown_login()">
+                            <svg class="menu_icon" height="2rem" viewBox="0 -960 960 960" fill="var(--main_text)">
+                                <path d="M222-255q63-44 125-67.5T480-346q71 0 133.5 23.5T739-255q44-54 62.5-109T820-480q0-145-97.5-242.5T480-820q-145 0-242.5 97.5T140-480q0 61 19 116t63 109Zm257.81-195q-57.81 0-97.31-39.69-39.5-39.68-39.5-97.5 0-57.81 39.69-97.31 39.68-39.5 97.5-39.5 57.81 0 97.31 39.69 39.5 39.68 39.5 97.5 0 57.81-39.69 97.31-39.68 39.5-97.5 39.5Zm.66 370Q398-80 325-111.5t-127.5-86q-54.5-54.5-86-127.27Q80-397.53 80-480.27 80-563 111.5-635.5q31.5-72.5 86-127t127.27-86q72.76-31.5 155.5-31.5 82.73 0 155.23 31.5 72.5 31.5 127 86t86 127.03q31.5 72.53 31.5 155T848.5-325q-31.5 73-86 127.5t-127.03 86Q562.94-80 480.47-80Zm-.47-60q55 0 107.5-16T691-212q-51-36-104-55t-107-19q-54 0-107 19t-104 55q51 40 103.5 56T480-140Zm0-370q34 0 55.5-21.5T557-587q0-34-21.5-55.5T480-664q-34 0-55.5 21.5T403-587q0 34 21.5 55.5T480-510Zm0-77Zm0 374Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="dropdown_activities" id="dropdown_activities">
+                
+            </div>
+    
+            <div class="dropdown_login" id="dropdown_login">
+                <h2 class="dropdown_text">login</h2>
+                <input id="usuario" type="text" placeholder="usuário">
+                <input id="senha" type="password" placeholder="senha">
+                <button onclick="openComunidade()" type="submit" class="bnt_login">entrar</button>
+                <a class="a_login">esqueceu a senha?</a>
+                <a href="cadastro.html" class="a_login">não tem conta? clique aqui</a>
+            </div>
+    
+        </header>
+
+    <main>
+
+        <div class="filter-container">
+            <input type="text" id="service-filter" placeholder="buscar serviço ou profissional..." oninput="filtrarServicos()">
+            <button type="button" onclick="filtrarServicos()">buscar</button>
+        </div>
+    
+        <div id="servicos">
+            <a class="link-bola baba" data-target="baba" data-name="babás" data-professionals="Ana Silva - (11) 98765-4321 - Rua das Flores, 123 - Centro;
+            Bruno Santos - (21) 98876-5432 - Av. da Liberdade, 456 - Copacabana;
+            Carla Oliveira - (31) 99988-7766 - Rua do Sol, 789 - Savassi;
+            Daniel Costa - (41) 97777-8888 - Av. Paraná, 101 - Batel;
+            Eliane Pereira - (51) 96666-5544 - Rua da Paz, 222 - Moinhos de Vento;
+            Felipe Lima - (61) 95555-3333 - Av. das Américas, 333 - Asa Sul">babá</a>
+            <a class="link-bola cuidador-de-pet" data-name="cuidadores de pets" data-professionals="Gabriela Almeida - (71) 94444-2222 - Rua das Acácias, 444 - Barra;
+            Hugo Martins - (81) 93333-1111 - Av. da Praia, 555 - Boa Viagem;
+            Isabela Souza - (91) 92222-0000 - Rua do Comércio, 666 - Cidade Velha;
+            João Pedro - (11) 91111-1234 - Av. São Paulo, 777 - Jardins;
+            Karen Rodrigues - (21) 91234-5678 - Rua dos Anjos, 888 - Botafogo;
+            Lucas Ferreira - (31) 92345-6789 - Av. do Trabalhador, 999 - Centro">cuidador de pet</a>
+            <a class="link-bola diarista" data-target="diarista" data-name="diaristas" data-professionals="Mariana Rocha - (41) 93456-7890 - Rua da Esperança, 234 - São Francisco;
+            Natália Gomes - (51) 94567-8901 - Av. do Lago, 345 - Praia de Belas;
+            Otávio Mendes - (61) 95678-9012 - Rua do Futuro, 456 - Lago Sul;
+            Paula Martins - (71) 96789-0123 - Av. dos Pássaros, 567 - Vitória;
+            Ricardo Nunes - (81) 97890-1234 - Rua do Trabalho, 678 - Olinda;
+            Sabrina Alves - (91) 98901-2345 - Av. das Nações, 789 - Bairro da Cidade">diarista</a>
+            <a class="link-bola eletricista" data-name="eletricistas" data-professionals="Thiago Ribeiro - (11) 90012-3456 - Rua dos Lírios, 890 - Vila Mariana;
+            Ulysses Andrade - (21) 90123-4567 - Av. do Comércio, 1011 - Ipanema;
+            Vanessa Lima - (31) 91234-5678 - Rua do Sol, 1122 - Lourdes;
+            Wagner Costa - (41) 92345-6789 - Av. da Saúde, 1233 - São Vicente;
+            Yasmin Santos - (51) 93456-7890 - Rua do Horizonte, 1344 - Cidade Baixa;
+            Zé Carlos - (61) 94567-8901 - Av. do Pôr do Sol, 1455 - Sudoeste">eletricista</a>
+            <a class="link-bola encanador" data-name="encanadores" data-professionals="Alice Oliveira - (71) 95678-9012 - Rua do Rio, 1566 - Graça;
+            Bruno Silva - (81) 96789-0123 - Av. das Palmeiras, 1677 - Piedade;
+            Claudia Pereira - (91) 97890-1234 - Rua dos Sinos, 1788 - Ananindeua;
+            Diego Mendes - (11) 98901-2345 - Av. do Lago, 1899 - Tatuapé;
+            Estela Ribeiro - (21) 90012-3456 - Av. da Liberdade, 2000 - Leblon;
+            Fernando Costa - (31) 91123-4567 - Av. do Mercado, 2111 - Pampulha">encanador</a>
+            <a class="link-bola jardineiro" data-name="jardineiros" data-professionals="Giovana Almeida - (41) 92234-5678 - Rua do Vento, 2222 - Juvevê;
+            Henrique Souza - (51) 93345-6789 - Av. dos Trabalhadores, 2333 - Cidade Baixa;
+            Inês Rocha - (61) 94456-7890 - Rua das Palmeiras, 2444 - Águas Claras;
+            Jorge Lima - (71) 95567-8901 - Av. dos Cristais, 2555 - Vitória;
+            Kátia Martins - (81) 96678-9012 - Rua do Sol, 2666 - Casa Forte;
+            Lucas Ribeiro - (91) 97789-0123 - Av. do Lazer, 2777 - Marco">jardineiro</a>
+            <a class="link-bola marceneiro" data-name="marceneiros" data-professionals="Mirella Santos - (11) 98890-1234 - Rua da Alegria, 2888 - Moema;
+            Norberto Costa - (21) 99901-2345 - Av. do Tempo, 2999 - Jardim Botânico;
+            Olivia Almeida - (31) 90012-3456 - Rua da Amizade, 3000 - Floresta;
+            Paulo Ferreira - (41) 91123-4567 - Av. do Futuro, 3111 - Santa Felicidade;
+            Quésia Lima - (51) 92234-5678 - Rua da Esperança, 3222 - Bom Fim;
+            Rafael Alves - (61) 93345-6789 - Av. do Sol, 3333 - Lago Sul">marceneiro</a>
+            <a class="link-bola montador-de-moveis" data-name="montadores de móveis" data-professionals="Simone Pereira - (71) 94456-7890 - Rua das Orquídeas, 3444 - Barra;
+            Tiago Mendes - (81) 95567-8901 - Av. das Palmeiras, 3555 - Jardim das Acácias;
+            Úrsula Ribeiro - (91) 96678-9012 - Rua do Lazer, 3666 - Marco;
+            Vinícius Santos - (11) 97789-0123 - Av. do Comercio, 3777 - Vila Madalena;
+            Wally Costa - (21) 98890-1234 - Rua dos Ventos, 3888 - Glória;
+            Xuxa Alves - (31) 99901-2345 - Av. das Estrelas, 3999 - Cidade Jardim">montador de móveis</a>
+            <a class="link-bola pintor" data-name="pintores" data-professionals="Yara Oliveira - (41) 90012-3456 - Rua da Luz, 4000 - Centro;
+            Zeca Rocha - (51) 91123-4567 - Av. da Lua, 4111 - Camaquã;
+            Andréia Martins - (61) 92234-5678 - Rua da Amizade, 4222 - Ceilândia;
+            Bruno Santos - (71) 93345-6789 - Av. do Tempo, 4333 - Graça;
+            Camila Almeida - (81) 94456-7890 - Rua das Flores, 4444 - Boa Viagem;
+            Dário Costa - (91) 95567-8901 - Av. do Horizonte, 4555 - São Brás">pintor</a>
+            <a class="link-bola serralheiro" data-name="serralheiros" data-professionals="Ellen Lima - (11) 96678-9012 - Rua da Liberdade, 4666 - Vila Buarque;
+            Felipe Martins - (21) 97789-0123 - Av. das Nações, 4777 - Lapa;
+            Gabriela Santos - (31) 98890-1234 - Rua das Acácias, 4888 - Funcionários;
+            Hugo Almeida - (41) 99901-2345 - Av. do Lago, 4999 - Vila Isabel;
+            Isadora Pereira - (51) 90012-3456 - Rua da Esperança, 5000 - Tristeza;
+            Júnior Ferreira - (61) 91123-4567 - Av. dos Pássaros, 5111 - Águas Claras">serralheiro</a>
+            <a class="link-bola diversas-funcoes" data-name="diversas funções" data-professionals="Letícia Costa - (71) 92234-5678 - Rua da Luz, 5222 - Jardim dos Nativos;
+            Murilo Nunes - (81) 93345-6789 - Av. do Rio, 5333 - Boa Vista;
+            Natália Lima - (91) 94456-7890 - Rua do Comércio, 5444 - Ananindeua;
+            Otávio Silva - (11) 95567-8901 - Av. do Mar, 5555 - Moema;
+            Patrícia Almeida - (21) 96678-9012 - Rua do Sol, 5666 - Ipanema;
+            Quirino Santos - (31) 97789-0123 - Av. das Flores, 5777 - Barro Preto">funções diversas</a>
+            <a class="link-bola servicos-terceirizados" data-name="serviços terceirizados" data-professionals="Renata Gomes - (41) 98890-1234 - Rua das Palmeiras, 5888 - Jardim das Flores;
+            Sérgio Nascimento - (51) 99901-2345 - Av. do Comércio, 5999 - Centro;
+            Tânia Almeida - (61) 90012-3456 - Rua da Liberdade, 6000 - Ipanema;
+            Ulisses Ferreira - (71) 91123-4567 - Av. das Nações, 6111 - Copacabana;
+            Vânia Costa - (81) 92234-5678 - Rua dos Sinos, 6222 - Glória;
+            Walter Silva - (91) 93345-6789 - Av. do Futuro, 6333 - Barra">serviços terceirizados</a>
+        </div>
+    
+        <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close" onclick="fecharPopup()">&times;</span>
+                <h2 id="popup-title"></h2>
+                <p id="popup-professionals"></p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer_div">
+            <div>
+                <p class="footer_text">Criado e desenvolvido por Henrique, João e Mariana. ©️</p>
+            </div>
+            <div>
+                <p class="footer_text">2024</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        function filtrarServicos() {
+            const filtro = document.getElementById("service-filter").value.toLowerCase();
+            const servicos = document.querySelectorAll("#servicos a");
+
+            servicos.forEach(servico => {
+                const nomeServico = servico.getAttribute("data-name").toLowerCase();
+                const profissionais = servico.getAttribute("data-professionals").toLowerCase();
+                const match = nomeServico.includes(filtro) || profissionais.includes(filtro);
+
+                servico.classList.toggle("hidden", !match);
+            });
+        }
+    </script>
+
+    <script>
+        // JavaScript para abrir e fechar o popup
+        document.querySelectorAll('#servicos a').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                abrirPopup(link);
+            });
+        });
+
+        function abrirPopup(link) {
+            const nomeServico = link.getAttribute('data-name');
+            const profissionais = link.getAttribute('data-professionals').split(';').join('<br>');
+
+            document.getElementById('popup-title').innerText = nomeServico;
+            document.getElementById('popup-professionals').innerHTML = profissionais;
+
+            document.getElementById('popup').classList.remove('hidden');
+            document.body.insertAdjacentHTML('beforeend', '<div class="overlay" onclick="fecharPopup()"></div>');
+        }
+
+        function fecharPopup() {
+            document.getElementById('popup').classList.add('hidden');
+            const overlay = document.querySelector('.overlay');
+            if (overlay) overlay.remove();
+        }
+    </script>
+
+    <script src="assets/script.js"></script>
+    
+    </body>
+</html>
