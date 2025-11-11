@@ -1,7 +1,9 @@
 <?php
 session_start();
 require 'conexao.php';
-if (!isset($_SESSION['usuario_id'])) {
+
+// Checa se o usuário NÃO está logado OU se ele NÃO é um cliente
+if (!isset($_SESSION['usuario_id']) || $_SESSION['servidor'] != 0) {
     header("Location: login.php?erro=restrito");
     exit;
 }

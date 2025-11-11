@@ -1,12 +1,13 @@
 <?php
 session_start();
-require 'conexao.php';
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.php?erro=restrito");
+// ... (require 'conexao.php' em alguns) ...
+
+// Esta linha checa se o usuário NÃO está logado OU se ele NÃO é um Cliente
+if (!isset($_SESSION['usuario_id']) || $_SESSION['servidor'] != 0) { 
+    // Se for um prestador (ou visitante), ele é expulso.
+    header("Location: login.php?erro=acesso_negado_cliente");
     exit;
 }
-// Pegar o ID do prestador pela URL
-$id_prestador = $_GET['id_prestador'];
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,18 +1,21 @@
 <?php
 // 1. INICIAR A SESSÃO E CONECTAR AO BANCO
 session_start();
-require 'conexao.php'; // O arquivo da Fase 1
+require 'conexao.php'; // <-- ESTA LINHA ESTAVA FALTANDO (CRIA O $conexao)
 
-// 2. PROTEGER A PÁGINA
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.html?erro=restrito");
+// 2. PROTEGER A PÁGINA (SÓ PARA CLIENTES)
+// (Aqui já está a proteção que discutimos na mensagem anterior)
+if (!isset($_SESSION['usuario_id']) || $_SESSION['servidor'] != 0) { 
+    header("Location: login.php?erro=restrito");
     exit;
 }
 
-// 3. PEGAR O SERVIÇO DA URL (Ex: "baba", "eletricista")
+// 3. PEGAR O SERVIÇO DA URL (Ex: "baba")
+// <-- ESTA LINHA ESTAVA FALTANDO
 $servico_escolhido = $_GET['servico']; 
 
-// 4. PREPARAR O TÍTULO (Deixar 'baba' bonito -> 'Baba')
+// 4. PREPARAR O TÍTULO
+// <-- ESTA LINHA ESTAVA FALTANDO
 $titulo_pagina = ucfirst($servico_escolhido);
 ?>
 

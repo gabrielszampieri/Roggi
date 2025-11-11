@@ -65,7 +65,7 @@
             <h2 class="dropdown_text">Login</h2>
             <input id="usuario" type="text" placeholder="usuário">
             <input id="senha" type="password" placeholder="senha">
-            <button onclick="openComunidade()" type="submit" class="bnt_login">Entrar</button>
+            <button href="comunidade.php" type="submit" class="bnt_login">Entrar</button>
             <a class="a_login">esqueceu a senha?</a>
             <a href="cadastro.php" class="a_login">Não tem conta? Clique aqui</a>
         </div>
@@ -276,16 +276,27 @@
             }
         )
 
-        document.getElementById('serv').addEventListener('change',
+        // ***** INÍCIO DA CORREÇÃO *****
+
+        var servSelect = document.getElementById('serv');
+        var outroInput = document.getElementById('outro_serv');
+
+        servSelect.addEventListener('change',
             function() {
-                var outroInput = document.getElementById('outro_serv')
                 if (this.value === 'outro') {
-                    outroInput.style.display = 'block'
+                    // Se for "outro", mostra o text box e desabilita o select
+                    outroInput.style.display = 'block';
+                    outroInput.removeAttribute('disabled');
+                    servSelect.setAttribute('disabled', 'true');
                 } else {
-                    outroInput.style.display = 'none'
+                    // Se for um serviço normal, esconde o text box e habilita o select
+                    outroInput.style.display = 'none';
+                    outroInput.setAttribute('disabled', 'true');
+                    servSelect.removeAttribute('disabled');
                 }
             }
         )
+        // ***** FIM DA CORREÇÃO *****
     </script>
 
 </body>

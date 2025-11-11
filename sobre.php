@@ -62,7 +62,7 @@
                 <h2 class="dropdown_text">Login</h2>
                 <input id="usuario" type="text" placeholder="usuário">
                 <input id="senha" type="password" placeholder="senha">
-                <button onclick="openComunidade()" type="submit" class="bnt_login">Entrar</button>
+                <button href="comunidade.php" type="submit" class="bnt_login">Entrar</button>
                 <a class="a_login">Esqueceu a senha?</a>
                 <a href="cadastro.php" class="a_login">Não tem conta? Clique aqui</a>
             </div>
