@@ -24,19 +24,19 @@
             </div>
 
             <div class="menu_buttons">
-                <a href="index.html">
+                <a href="index.php">
                     <h2 class="menu_text">início</h2>
                 </a>
-                <a href="servicos.html">
+                <a href="servicos.php">
                     <h2 class="menu_text">serviços</h2>
                 </a>
                 <a onclick="comunidade()">
                     <h2 class="menu_text">comunidade</h2>
                 </a>
-                <a href="sobre.html">
+                <a href="sobre.php">
                     <h2 class="menu_text">sobre nós</h2>
                 </a>
-                <a href="login.html">
+                <a href="login.php">
                     <h2 class="menu_text">Login</h2>
                 </a>
             </div>
@@ -65,12 +65,12 @@
         </div>
 
         <div class="dropdown_login" id="dropdown_login">
-            <h2 class="dropdown_text">login</h2>
+            <h2 class="dropdown_text">Login</h2>
             <input id="usuario" type="text" placeholder="usuário">
             <input id="senha" type="password" placeholder="senha">
-            <button onclick="openComunidade()" type="submit" class="bnt_login">entrar</button>
+            <button onclick="openComunidade()" type="submit" class="bnt_login">Entrar</button>
             <a class="a_login">esqueceu a senha?</a>
-            <a href="cadastro.html" class="a_login">não tem conta? clique aqui</a>
+            <a href="cadastro.php" class="a_login">Não tem conta? clique aqui</a>
         </div>
 
     </header>
@@ -79,7 +79,7 @@
         <main>
             <section class="section_1" id="section_form">
 
-                <form method="POST" action="login.php">
+                <form method="POST" action="logar.php">
 
                     <div class="div_2">
                         <h2 class="sobre_h2">Login</h2>

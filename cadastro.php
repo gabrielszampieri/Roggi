@@ -24,16 +24,16 @@
             </div>
 
             <div class="menu_buttons">
-                <a href="index.html">
+                <a href="index.php">
                     <h2 class="menu_text">início</h2>
                 </a>
-                <a href="servicos.html">
+                <a href="servicos.php">
                     <h2 class="menu_text">serviços</h2>
                 </a>
                 <a onclick="comunidade()">
                     <h2 class="menu_text">comunidade</h2>
                 </a>
-                <a href="sobre.html">
+                <a href="sobre.php">
                     <h2 class="menu_text">sobre nós</h2>
                 </a>
             </div>
@@ -62,12 +62,12 @@
         </div>
 
         <div class="dropdown_login" id="dropdown_login">
-            <h2 class="dropdown_text">login</h2>
+            <h2 class="dropdown_text">Login</h2>
             <input id="usuario" type="text" placeholder="usuário">
             <input id="senha" type="password" placeholder="senha">
-            <button onclick="openComunidade()" type="submit" class="bnt_login">entrar</button>
+            <button onclick="openComunidade()" type="submit" class="bnt_login">Entrar</button>
             <a class="a_login">esqueceu a senha?</a>
-            <a href="cadastro.html" class="a_login">não tem conta? clique aqui</a>
+            <a href="cadastro.php" class="a_login">Não tem conta? Clique aqui</a>
         </div>
 
     </header>
@@ -76,9 +76,8 @@
 
         <section class="section_1" id="section_form">
             <form method="POST" action="form.php">
-
                 <div class="div_2"> <!-- div vertical -->
-                    <h2 class="sobre_h2">cadastro</h2>
+                    <h2 class="sobre_h2">Cadastro</h2>
                     <div class="form">
                         <label class="form_text" for="servidor">Você é prestador?</label>
                         <select id="test_serv" name="servidor" required>
@@ -224,8 +223,18 @@
                             <input id="outro_serv" name="servicos" type="text" placeholder="digite">
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <div class="form_group">
+                    <div class="form">
+                        <label class="form_text" for="usuario">Nome de usuário</label>
+                        <input id="usuario" name="usuario" type="text" required placeholder="mariasilva">
+                    </div>
+                    <div class="form">
+                        <label class="form_text" for="senha">Senha</label>
+                        <input id="senha" name="senha" type="password" required placeholder="*******">
+                    </div>
+                </div>
 
                 <div class="div_2">
                     <button type="submit">Cadastrar</button>
@@ -255,7 +264,7 @@
     <script src="assets/script.js"></script>
     <script>
         document.getElementById('test_serv').addEventListener('change',
-            function () {
+            function() {
                 var servidorDiv = document.getElementById('div_servidor')
                 var servReq = document.getElementById('serv')
                 if (this.value === '1') {
@@ -268,7 +277,7 @@
         )
 
         document.getElementById('serv').addEventListener('change',
-            function () {
+            function() {
                 var outroInput = document.getElementById('outro_serv')
                 if (this.value === 'outro') {
                     outroInput.style.display = 'block'

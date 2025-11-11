@@ -25,19 +25,19 @@
             </div>
 
             <div class="menu_buttons">
-                <a href="index.html">
+                <a href="index.php">
                     <h2 id="menu_text_selected">início</h2>
                 </a>
-                <a href="servicos.html">
+                <a href="servicos.php">
                     <h2 class="menu_text">serviços</h2>
                 </a>
                 <a onclick="comunidade()">
                     <h2 class="menu_text">comunidade</h2>
                 </a>
-                <a href="sobre.html">
+                <a href="sobre.php">
                     <h2 class="menu_text">sobre nós</h2>
                 </a>
-                <a href="login.html">
+                <a href="login.php">
                     <h2 class="menu_text">login</h2>
                 </a>
             </div>
@@ -71,7 +71,7 @@
             <input id="senha" type="password" placeholder="senha">
             <button onclick="openComunidade()" type="submit" class="bnt_login">entrar</button>
             <a class="a_login">esqueceu a senha?</a>
-            <a href="cadastro.html" class="a_login">não tem conta? clique aqui</a>
+            <a href="cadastro.php" class="a_login">não tem conta? clique aqui</a>
         </div>
 
     </header>

@@ -22,17 +22,17 @@
                 </div>
 
                 <div class="menu_buttons">
-                    <a href="index.html">
+                    <a href="index.php">
                         <h2 class="menu_text">início</h2>
                     </a>
-                    <a href="servicos.html">
-                        <h2 class="menu_text">serviços</h2>
+                    <a href="servicos.php">
+                        <h2 class="menu_text">Serviços</h2>
                     </a>
                     <a onclick="comunidade()">
-                        <h2 class="menu_text">comunidade</h2>
+                        <h2 class="menu_text">Comunidade</h2>
                     </a>
-                    <a href="sobre.html">
-                        <h2 id="menu_text_selected">sobre nós</h2>
+                    <a href="sobre.php">
+                        <h2 id="menu_text_selected">Sobre nós</h2>
                     </a>
                 </div>
 
@@ -59,12 +59,12 @@
             </div>
 
             <div class="dropdown_login" id="dropdown_login">
-                <h2 class="dropdown_text">login</h2>
+                <h2 class="dropdown_text">Login</h2>
                 <input id="usuario" type="text" placeholder="usuário">
                 <input id="senha" type="password" placeholder="senha">
-                <button onclick="openComunidade()" type="submit" class="bnt_login">entrar</button>
-                <a class="a_login">esqueceu a senha?</a>
-                <a href="cadastro.html" class="a_login">não tem conta? clique aqui</a>
+                <button onclick="openComunidade()" type="submit" class="bnt_login">Entrar</button>
+                <a class="a_login">Esqueceu a senha?</a>
+                <a href="cadastro.php" class="a_login">Não tem conta? Clique aqui</a>
             </div>
 
         </header>
@@ -76,19 +76,19 @@
             <div class="div_1" id="sobre_column">
                 <div class="div_2">
                     <h2 class="sobre_h2">
-                        missão
+                        Missão
                     </h2>
                     <p class="paragraph_1">
-                        oferecer aos nossos clientes um serviço de qualidade e conveniência, conectando-os aos melhores profissionais para resolverem seus problemas domésticos de forma rápida e eficiente, proporcionando mais tranquilidade e qualidade de vida.
+                        Oferecer aos nossos clientes um serviço de qualidade e conveniência, conectando-os aos melhores profissionais para resolverem seus problemas domésticos de forma rápida e eficiente, proporcionando mais tranquilidade e qualidade de vida.
                     </p>
                 </div>
                 
                 <div class="div_2">
                     <h2 class="sobre_h2">
-                        visão
+                        Visão
                     </h2>
                     <p class="paragraph_1">
-                        ser a empresa líder no mercado de serviços domésticos, reconhecida por nossos clientes como a melhor opção devido à qualidade e excelência de nossos serviços, tornando-se referência no setor.
+                        Ser a empresa líder no mercado de serviços domésticos, reconhecida por nossos clientes como a melhor opção devido à qualidade e excelência de nossos serviços, tornando-se referência no setor.
                     </p>
                 </div>
 
@@ -97,22 +97,22 @@
                         valores
                     </h2>
                     <p class="paragraph_1">
-                        excelência, conveniência, respeito, inovação e comprometimento.
+                        Excelência, conveniência, respeito, inovação e comprometimento.
                     </p>
                 </div>
 
                 <div class="div_2">
                     <h2 class="sobre_h2">
-                        contato
+                        Contato
                     </h2>
                     <p class="paragraph_1">
-                        telefone: <a href=""></a>(16) 99379-6687
+                        Telefone: <a href=""></a>(16) 99379-6687
                     </p>
                     <p class="paragraph_1">
-                        telefone: <a href=""></a>(16) 98166-4343
+                        Telefone: <a href=""></a>(16) 98166-4343
                     </p>
                     <p class="paragraph_1">
-                        telefone: <a href=""></a>(16) 99353-7375
+                        Telefone: <a href=""></a>(16) 99353-7375
                     </p>
                     <p class="paragraph_1">
                         e-mail: adm@roggi.com.br
@@ -122,7 +122,7 @@
 
                 <div class="div_2" id="sobre_div"></div>
                     <h2 class="sobre_h2">
-                        fundadores
+                        Fundadores
                     </h2>
                 
                     <div class="grid_3" id="sobre_grid">

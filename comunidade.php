@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) { // Se não estiver logado
+    header("Location: login.php?erro=restrito");
+    exit;
+}
+?>
+<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="utf-8"/>
@@ -23,16 +30,16 @@
                 </div>
     
                 <div class="menu_buttons">
-                    <a href="index.html">
+                    <a href="index.php">
                         <h2 class="menu_text">início</h2>
                     </a>
-                    <a href="servicos.html">
+                    <a href="servicos.php">
                         <h2 class="menu_text">serviços</h2>
                     </a>
-                    <a href="comunidade.html">
+                    <a href="comunidade.php">
                         <h2 id="menu_text_selected">comunidade</h2>
                     </a>
-                    <a href="sobre.html">
+                    <a href="sobre.php">
                         <h2 class="menu_text">sobre nós</h2>
                     </a>
                 </div>
@@ -65,7 +72,7 @@
                 <input id="senha" type="password" placeholder="senha">
                 <button onclick="openComunidade()" type="submit" class="bnt_login">entrar</button>
                 <a class="a_login">esqueceu a senha?</a>
-                <a href="cadastro.html" class="a_login">não tem conta? clique aqui</a>
+                <a href="cadastro.php" class="a_login">não tem conta? clique aqui</a>
             </div>
     
         </header>
