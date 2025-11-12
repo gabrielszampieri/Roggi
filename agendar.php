@@ -1,6 +1,6 @@
 <?php
 session_start();
-// ... (require 'conexao.php' em alguns) ...
+require 'conexao.php'; // <-- 1. ADICIONE ESTA LINHA
 
 // Esta linha checa se o usuário NÃO está logado OU se ele NÃO é um Cliente
 if (!isset($_SESSION['usuario_id']) || $_SESSION['servidor'] != 0) { 
@@ -8,13 +8,18 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['servidor'] != 0) {
     header("Location: login.php?erro=acesso_negado_cliente");
     exit;
 }
+
+// 2. ADICIONE ESTA LINHA PARA PEGAR O ID DO PRESTADOR DA URL
+$id_prestador = $_GET['id_prestador']; 
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Solicitar Agendamento</title>
     <link href="assets/style.css" rel="stylesheet">
 </head>
+
 <body>
     <main>
         <section class="section_1" id="section_form">
@@ -42,4 +47,5 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['servidor'] != 0) {
         </section>
     </main>
 </body>
+
 </html>
